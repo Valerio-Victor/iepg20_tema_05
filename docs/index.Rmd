@@ -40,6 +40,33 @@ use_scribble()
 use_search(show_icon = TRUE)
 ```
 
+```{r}
+# PACOTES NECESSÁRIOS
+library(ggplot2)
+library(magrittr, include.only = '%>%')
+
+# IMPORTAÇÃO DOS DADOS:
+agregados_macroeconomicos_id <- sidrar::get_sidra(
+  api = '/t/1621/n1/all/v/all/p/all/c11255/90707,93404,93405,93406,93407,93408/d/v584%202') %>%
+  janitor::clean_names() %>% 
+  dplyr::mutate(date = lubridate::yq(trimestre_codigo), 
+                format = '%Y-%m') %>% 
+  dplyr::select(date, valor, setores_e_subsetores) %>%
+  dplyr::mutate(setores_e_subsetores = dplyr::case_when(
+    setores_e_subsetores == 'PIB a preços de mercado' ~ 'Y',
+    setores_e_subsetores == 'Despesa de consumo das famílias' ~ 'C',
+    setores_e_subsetores == 'Formação bruta de capital fixo' ~ 'I',
+    setores_e_subsetores == 'Despesa de consumo da administração pública' ~ 'G',
+    setores_e_subsetores == 'Exportação de bens e serviços' ~ 'X',
+    setores_e_subsetores == 'Importação de bens e serviços (-)' ~ 'M')) 
+
+# ARRUMAÇÃO DOS DADOS:
+agregados_macroeconomicos <- agregados_macroeconomicos_id %>%
+  dplyr::rename('Componente' = setores_e_subsetores,
+                'Data' = date, 
+                'Valor' = valor) 
+```  
+
 ## TÓPICOS ABORDADOS
 
 <br>
@@ -1055,7 +1082,42 @@ $X$: Exportações;
 $M$: Importações.
 ]
 
-  
+---
+## O BRASIL EM PERSPECTIVA
+
+```{r}
+# VISUALIZAÇÃO DOS DADOS:
+agregados_macroeconomicos_grafico <- agregados_macroeconomicos %>% 
+  dplyr::mutate(Componente = as.factor(Componente)) %>% 
+  ggplot2::ggplot() +
+  ggplot2::geom_line(mapping = ggplot2::aes(x = Data, 
+                                            y = Valor, 
+                                            color = Componente),
+                     size = 0.5) +
+  ggplot2::geom_point(mapping = ggplot2::aes(x = Data, 
+                                             y = Valor, 
+                                             color = Componente),
+                      size = 0.75) +
+  ggplot2::scale_colour_manual(values = c('#1c5253','#ff8848',
+                                          '#7e7caa','#df90a9',
+                                          '#00aab1','#73bb75')) + 
+  ggplot2::scale_x_date(name = waiver()) +
+  ggplot2::labs(title = 'Agregados Macroeconômicos',
+                colour = '',
+                x = 'Trimestres',
+                y = 'Índice (média de 1995 = 100)') +
+  xaringanthemer::theme_xaringan(text_font_size = 15,
+                                 title_font_size = 20) 
+
+agregados_macroeconomicos_grafico <- plotly::ggplotly(agregados_macroeconomicos_grafico) 
+
+
+widgetframe::frameWidget(agregados_macroeconomicos_grafico, 
+                         width = '100%', 
+                         height = '100%')
+
+```
+
   
   
   
