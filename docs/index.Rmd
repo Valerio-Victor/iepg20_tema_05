@@ -1,6 +1,6 @@
 ---
-title: 'AGREGADOS MACROECONÔMICOS </br> (TEMA 05)'
-subtitle: 'IEPG020 - Introdução à Economia'
+title: 'AGREGADOS MACROECONÔMICOS'
+subtitle: 'Introdução à Economia </br> (IEPG020)'
 author: 'Autor: Victor Valerio'
 date: 'Última atualização: `r format(Sys.Date(),"%d-%m-%Y")`'
 output:
@@ -28,6 +28,7 @@ style_mono_light(base_color = '#1c5253',
 
 # CONFIGURAÇÃO PADRÃO CHUNK: ----
 knitr::opts_chunk$set(echo = F,
+                      cache = T,
                       results = 'asis', 
                       warning = F, 
                       message = F, 
@@ -69,6 +70,8 @@ agregados_macroeconomicos <- agregados_macroeconomicos_id %>%
 
 ## TÓPICOS ABORDADOS
 
+  ---
+
 <br>
 
 - [**Identidades Macroeconômicas**](#introducao)
@@ -93,6 +96,7 @@ name: introducao
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
 
 **CONCEITOS**
   
@@ -114,6 +118,8 @@ da definição de 3 conceitos iniciais da macroeconomia, são eles:
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
+
 - **PRODUTO AGREGADO**: Corresponde a **soma de valores (R$)** de todos os **bens (ou serviços) finais** 
 produzidos em um determinado **país** em um determinado **período de tempo** (**variável de fluxo**).
 
@@ -132,11 +138,12 @@ $i =$ **bem (ou serviço) final** $(i = 1, 2, 3, ..., n)$
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
+
 - **BEM (OU SERVIÇO) FINAL**: São bens e serviços que **não são utilizados** em nenhuma etapa de um 
 processo de produção, isto é, não são insumos de produção. 
 
-- **BEM (OU SERVIÇO) INTERMEDIÁRIO**: São bens e serviços que **são utilizados** em nenhuma etapa de um 
-processo de produção, isto é, são insumos de produção. 
+- **BEM (OU SERVIÇO) INTERMEDIÁRIO**: São bens e serviços que **são utilizados** em algum processo de produção (mercantil), isto é, são insumos de produção. 
 
 - Para entender melhor a definição de produto agregado, bens finais e bens intermediários, vamos 
 partir de um exemplo teórico de uma economia que produz apenas um bem final: o pão.
@@ -147,6 +154,8 @@ partir de um exemplo teórico de uma economia que produz apenas um bem final: o 
 
 
 ## IDENTIDADES MACROECONÔMICAS
+
+  ---
 
 
 **PREMISSAS DO EXEMPLO TEÓRICA**
@@ -165,6 +174,8 @@ partir de um exemplo teórico de uma economia que produz apenas um bem final: o 
 
 
 ## IDENTIDADES MACROECONÔMICAS
+
+  ---
 
 ```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
 
@@ -210,6 +221,8 @@ knitr::kable(cronograma,
 
 
 ## IDENTIDADES MACROECONÔMICAS
+
+  ---
 
 
 ```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
@@ -262,6 +275,8 @@ knitr::kable(cronograma,
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
+
 
 ```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
 
@@ -311,6 +326,8 @@ knitr::kable(cronograma,
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
+
 
 ```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
 
@@ -359,6 +376,8 @@ knitr::kable(cronograma,
 
 
 ## IDENTIDADES MACROECONÔMICAS
+
+  ---
 
 
 ```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
@@ -410,6 +429,8 @@ knitr::kable(cronograma,
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
+
 
 ```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
 
@@ -458,6 +479,8 @@ knitr::kable(cronograma,
 
 
 ## IDENTIDADES MACROECONÔMICAS
+
+  ---
 
 
 ```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
@@ -509,6 +532,8 @@ e o valor total do processo produtivo da farinha é somado duas vezes;
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
+
 
 ```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
 
@@ -556,6 +581,8 @@ knitr::kable(cronograma,
 
 
 ## IDENTIDADES MACROECONÔMICAS
+
+  ---
 
 
 ```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
@@ -608,6 +635,8 @@ produção);
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
+
 
 ```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
 
@@ -659,6 +688,8 @@ valor adicionado em cada processo de produção**.
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
+
 
 - Em uma economia real não existem apenas três processos, mas uma **infinidade processos de produção
 de diferentes setores econômicos**. Isto pode dificultar a definição de qual produto é intermediário 
@@ -677,6 +708,8 @@ adicionados (ou, valores agregados)**.
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
+
 - Uma vez entendido o conceito de produto agregado, pode-se passar à explicação de renda agregada;
 
 - **Renda Agregada: Corresponde a soma de valores (R$) de todas as remuneração dos fatores de
@@ -690,7 +723,9 @@ class: inverse
 <div style="text-align: justify">
 
 
-## REVISÃO DE MICROECONOMIA
+## CONCEITO COMPLEMENTAR
+
+  ---
 
 
 - Os FATORES DE PRODUÇÃO são os recursos (ou insumos) utilizados no processo de produção, exemplo:
@@ -708,7 +743,9 @@ class: inverse
 <div style="text-align: justify">
 
 
-## REVISÃO DE MICROECONOMIA
+## CONCEITO COMPLEMENTAR
+
+  ---
 
 - Por sua vez, o detentores dos recursos (ou insumos) devem ser remunerados pela utilização e a 
 remuneração de cada fato de produção recebe um nome diferente, são eles:
@@ -724,6 +761,8 @@ remuneração de cada fato de produção recebe um nome diferente, são eles:
 
 
 ## IDENTIDADES MACROECONÔMICAS
+
+  ---
 
 
 - **Renda Agregada (RA)**: soma de valores (R$) de 
@@ -745,6 +784,8 @@ $Lucros$: remuneração pelo uso da administração.
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
+
 - Como se pode depreender, o valor agregado em um processo de produção corresponde ao valor 
 necessário para remunerar todos os envolvidos na etapa produtiva;
 
@@ -760,6 +801,8 @@ produção**;
 <div style="text-align: justify">
 
 ## IDENTIDADES MACROECONÔMICAS
+
+  ---
 
 - **PRODUTO AGREGADO (Abordagem 1)**: Soma de todos os valores (R$) dos bens finais produzidos em uma 
 economia em um período;
@@ -788,6 +831,8 @@ class: inverse, center, middle
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
+
 
 - Agora, basta compreendermos o último conceito inicial de macroeconomia, mais especificamente, o 
 de **demanda agregada**;
@@ -806,6 +851,8 @@ agregada**.
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
+
 
 - Para **consumir** um bem (ou serviço) final é necessário **alocar a renda** para pagar a transação.
 
@@ -823,6 +870,8 @@ agregada**.
 
 ## IDENTIDADES MACROECONÔMICAS
 
+  ---
+
 
 - Supondo que toda a renda conseguida seja alocada em consumo de bens finais, 
 tem-se a principal identidade contábil macroeconômica (não se trata de uma relação 
@@ -837,6 +886,8 @@ class:inverse, center, middle
 <div style="text-align: justify">
 
 ## IDENTIDADES MACROECONÔMICAS
+
+  ---
 
 - Devido a identidade contábil, pode-se afirmar que é possível mensurar o produto agregado por meio 
 de 3 óticas: 
@@ -864,6 +915,8 @@ name: pib
 
 ## PRODUTO INTERNO BRUTO (PIB)
 
+  ---
+
 - O conceito de **Produto Interno Bruto (PIB)** é largamente comentado no nosso dia a dia e, como se
 pode esperar, está intimamente associado ao conceito de **Produto Agregado**. Antes de realizar esta
 associação é necessário compreender dois conceitos adicionais.
@@ -874,6 +927,8 @@ associação é necessário compreender dois conceitos adicionais.
 
 
 ## PRODUTO INTERNO BRUTO (PIB)
+
+  ---
 
 
   - **Residentes**: Território geográfico em que o interesse econômico do agente é predominante (por
@@ -891,6 +946,8 @@ associação é necessário compreender dois conceitos adicionais.
 
 ## PRODUTO INTERNO BRUTO (PIB)
 
+  ---
+
 - Assim, o **Produto Interno Bruto** corresponde a uma **abordagem do cálculo do produto agregado** em 
 que não são discriminados quais os fatores de produção residentes e quais os fatores de produção não 
 residentes (**o foco está no território nacional**);
@@ -907,6 +964,8 @@ residentes).
 
 ## PRODUTO INTERNO BRUTO (PIB)
 
+  ---
+
 
 - Por seu turno, o **Produto Nacional Bruto** (mais chamado de **Renda Nacional Bruta**) corresponde 
 a uma abordagem do cálculo do produto agregado em que são discriminados quais os fatores de produção
@@ -922,6 +981,8 @@ produção não estejam operando no Brasil.
 
 
 ## PRODUTO INTERNO BRUTO (PIB)
+
+  ---
 
 
 ```{r , results = 'asis', echo = F, warning = F, message = F, error = F, fig.align ='center', out.width = '100%'}
@@ -979,6 +1040,8 @@ name: fcr
 
 ## FLUXO CIRCULAR DA RENDA
 
+  ---
+
 
 - O **Fluxo Circular da Renda** é um instrumento didático complementar aos 
 conceitos básicos apresentados na apresentação da identidade macroeconômica
@@ -999,6 +1062,8 @@ produção) realizadas entre os setores institucionais.**
 
 ## FLUXO CIRCULAR DA RENDA 
 
+  ---
+
 - Mais uma vez, o conceito de Fluxo Circular da Renda não se explica por si só. Torna-se necessário 
 realizar algumas definições adicionais. Quais sejam:
 
@@ -1018,6 +1083,8 @@ função e objetivos econômicos.
 
 
 ## FLUXO CIRCULAR DA RENDA 
+
+  ---
 
 - Por uma classificação mais teórica, existem 4 setores institucionais:
 
@@ -1040,6 +1107,8 @@ significativa.
 
 ## FLUXO CIRCULAR DA RENDA 
 
+  ---
+
 
 - **GOVERNO**: Instituições públicas que desempenham a atividade de produção de bens e serviços não 
 mercantis voltados para à coletividade e/ou voltados à repatição da renda e do patrimônio. São bens 
@@ -1053,6 +1122,8 @@ obrigatório de tributos efetuado por todos os outros setores institucionais;
 
 ## FLUXO CIRCULAR DA RENDA 
 
+  ---
+
 - **RESTO DO MUNDO**: Todos os setores institucionais podem ser nacionais (chamados de residentes) 
 ou estrangeiros (chamados de não residentes), estes setores institucionais impactam nas atividades 
 produtivas um dos outros e realizam transações entre si. É chamado de “resto do mundo” pois não 
@@ -1062,6 +1133,8 @@ importa a nacionalidade dos estrangeiros (não residentes), basta saber que não
 ---
 
 ## FLUXO CIRCULAR DA RENDA 
+
+  ---
 
 $$Y = C + I + G + X - M$$
 </br> 
@@ -1084,6 +1157,8 @@ $M$: Importações.
 
 ---
 ## O BRASIL EM PERSPECTIVA
+
+  ---
 
 ```{r}
 # VISUALIZAÇÃO DOS DADOS:
