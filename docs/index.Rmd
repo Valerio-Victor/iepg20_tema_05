@@ -129,7 +129,7 @@ $P_i =$ Preço do **bem (ou serviço) final** i;
   
 $Q_i =$ Quantidade produzida do **bem (ou serviço) final** i;
   
-$i =$ **bem (ou serviço) final** $(i = 1, 2, 3, ..., n)$
+$i =$ **bem (ou serviço) final** $(i = 1, 2,..., n)$
   
   
 ---
