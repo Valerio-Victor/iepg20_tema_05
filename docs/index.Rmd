@@ -1184,7 +1184,14 @@ agregados_macroeconomicos_grafico <- agregados_macroeconomicos %>%
   xaringanthemer::theme_xaringan(text_font_size = 15,
                                  title_font_size = 20) 
 
-agregados_macroeconomicos_grafico <- plotly::ggplotly(agregados_macroeconomicos_grafico) 
+agregados_macroeconomicos_grafico <- plotly::ggplotly(agregados_macroeconomicos_grafico) %>% 
+  plotly::layout(
+    legend = list(
+      orientation = "h",   # horizontal
+      x = 0.5,             # centraliza no eixo x
+      xanchor = "center",  
+      y = -0.3             # desloca para baixo do gráfico
+    ))
 
 
 widgetframe::frameWidget(agregados_macroeconomicos_grafico, 
